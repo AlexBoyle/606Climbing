@@ -24,7 +24,7 @@ function BasicCard(obj) {
       <CardContent>
 		 
 		<Typography gutterBottom variant="h5" component="div">
-			{obj['name']}
+			{obj['name']}<br/>obj['venmo']
           </Typography>
 
       </CardContent>
