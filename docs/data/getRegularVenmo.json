@@ -7,16 +7,11 @@
 	{
 		"name": "Alex",
 		"img": "https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/201201215_2089723111167682_8613872648861542852_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=SsL9AqYFoekAX_qbN83&_nc_ht=scontent-ord5-1.xx&oh=00_AfDPMrvWdns3C8UJCCUZJydAeFUWXBBTKPhIaTTAIIRK7Q&oe=645935CF",
-		"venmo": ""
+		"venmo": "venmo://paycharge?recipients=Alex-Boyle-10&amount=0&note=Sullys%20House&tnx=pay"
 	},
 	{
 		"name": "Kevin",
 		"img": "/images/kevin.png",
-		"venmo": ""
-	},
-	{
-		"name": "Maddy",
-		"img": "/images/kevin.png",
-		"venmo": "venmo://paycharge?recipients=Tyler-Yanke&amount=0&note=Sullys%20House&tnx=pay"
+		"venmo": "venmo://paycharge?recipients=KevinNasto&amount=0&note=Sullys%20House&tnx=pay"
 	}
 ]
