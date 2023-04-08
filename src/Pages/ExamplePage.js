@@ -3,7 +3,7 @@ import React from 'react';
 function ExamplePage() {
   return (
     <>
-      Hello
+      404
     </>
   );
 }

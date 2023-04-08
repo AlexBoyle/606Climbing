@@ -14,8 +14,9 @@ function Header() {
     <>
       <Nav>
 		<NavMenu>
-			<NavLink to='/' activeStyle style={{paddingLeft: '0px'}}>
+			<NavLink to='/' activeStyle style={{paddingLeft: '0px', width: '85px'}}>
 				<img src="/images/606Logo.png" style={{height: "85px"}}/>
+				
 			  </NavLink>
 		   <NavLink to='/' activeStyle>
             Home

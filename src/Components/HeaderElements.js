@@ -21,7 +21,13 @@ padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 &.active {
-	color: #000000;
+	background-color: rgba(255,255,255,.15);
+	color: white;
+}
+:hover {
+	transition: all 0.3s ease-in-out;
+	background-color: rgba(255,255,255,.1);
+	
 }
 `;
 
@@ -57,9 +63,6 @@ export const NavBtn = styled.nav`
 display: flex;
 align-items: center;
 margin-right: 24px;
-/* Third Nav */
-/* justify-content: flex-end;
-width: 100vw; */
 @media screen and (max-width: 768px) {
 	display: none;
 }
@@ -67,7 +70,7 @@ width: 100vw; */
 
 export const NavBtnLink = styled(Link)`
 border-radius: 4px;
-background: #808080;
+background: rgb(28 53 80 / 80%);
 padding: 10px 22px;
 color: white;
 outline: none;
@@ -75,11 +78,10 @@ border: none;
 cursor: pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
-/* Second Nav */
 margin-left: 24px;
 &:hover {
 	transition: all 0.2s ease-in-out;
-	background: #fff;
+	background: #000000;
 	color: #aaaaaa;
 }
 `;

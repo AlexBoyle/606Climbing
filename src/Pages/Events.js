@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function ExamplePage() {
+
+	
   return (
     <>
 		<div>
@@ -9,6 +11,7 @@ function ExamplePage() {
 		  If you plan on attending, we appriciate it if you sign up <a style={{color: "white"}} href="https://www.meetup.com/606-climbing">here (https://www.meetup.com/606-climbing)</a>
 		  
 		  <h1>Other Upcomming Events</h1>
+
 			- 
 		</div>
     </>
