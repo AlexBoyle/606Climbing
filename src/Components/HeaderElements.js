@@ -55,7 +55,7 @@ margin-right: -24px;
 /* width: 100vw;
 white-space: nowrap; */
 @media screen and (max-width: 768px) {
-	display: none;
+
 }
 `;
 
@@ -64,7 +64,7 @@ display: flex;
 align-items: center;
 margin-right: 24px;
 @media screen and (max-width: 768px) {
-	display: none;
+	
 }
 `;
 
