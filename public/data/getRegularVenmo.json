@@ -13,5 +13,10 @@
 		"name": "Kevin",
 		"img": "/images/kevin.png",
 		"venmo": ""
+	},
+	{
+		"name": "Maddy",
+		"img": "/images/kevin.png",
+		"venmo": "venmo://paycharge?recipients=Tyler-Yanke&amount=0&note=Sullys%20House&tnx=pay"
 	}
 ]
