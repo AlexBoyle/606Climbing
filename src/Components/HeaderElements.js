@@ -17,7 +17,7 @@ color: white;
 display: flex;
 align-items: center;
 text-decoration: none;
-padding: 0 1rem;
+padding: 10px;
 height: 100%;
 cursor: pointer;
 &.active {

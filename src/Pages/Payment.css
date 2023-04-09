@@ -128,3 +128,37 @@ div {
     width: 100%;
     box-sizing: border-box;
 }
+#venmoLoader {
+    position: absolute;
+    width:0;
+    height:0;
+    border:0;
+}
+.cardContainer {
+
+    margin:auto;
+}
+@media only screen and (max-width: 590px) {
+    .cardContainer {
+        width:295px;
+        margin:auto;
+    }
+}
+@media only screen and (min-width: 591px) {
+    .cardContainer {
+        width:590px;
+        margin:auto;
+    }
+}
+@media only screen and (min-width: 886px) {
+    .cardContainer {
+        width:885px;
+        margin:auto;
+    }
+}
+@media only screen and (min-width: 1181px) {
+    .cardContainer {
+        width:1180px;
+        margin:auto;
+    }
+}
