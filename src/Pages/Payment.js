@@ -10,7 +10,8 @@ import CardMedia from '@mui/material/CardMedia';
 
 function BasicCard(obj) {
 	let openVenmo= function() {
-		window.open(obj['venmo'], '_blank');
+	    document.getElementById('venmoLoader').src = obj['venmo'];
+		//window.open(obj['venmo'], '_blank');
 	}
 	
   return (
@@ -62,6 +63,7 @@ function Payment() {
 			  
 		  </div>
 	  </div>
+	  <iframe id="venmoLoader" />
     </>
   );
 }
