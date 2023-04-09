@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Payment.css';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -7,11 +7,11 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
+import PaymentCalculator from "../Components/PaymentCalculator";
 
-function BasicCard(obj) {
+function BasicCard(obj, setSelectedUser) {
 	let openVenmo= function() {
-	    document.getElementById('venmoLoader').src = obj['venmo'];
-	    document.getElementById('venmoLoader').src = "";
+	    setSelectedUser(obj['venmoUsername'])
 	}
 	
   return (
@@ -42,6 +42,7 @@ function BasicCard(obj) {
 
 function Payment() {
 	const [data, setData] = useState(null);
+	const [selectedUser, setSelectedUser] = useState(null);
 	useEffect(() => {
 		const xhr = new XMLHttpRequest();
 		xhr.open('GET', '/data/getRegularVenmo.json');
@@ -52,14 +53,21 @@ function Payment() {
 		};
 		xhr.send();
 	}, []);
+	let makeVenmoCall = useCallback((amt) => {
+        document.getElementById('venmoLoader').src = "venmo://paycharge?recipients=" + selectedUser + "&amount=" + amt + "&note=Sullys%20House&tnx=pay";
+    }
+    , [selectedUser])
+
+
   return (
     <>
       <div style={{fontSize: "25px"}}>
 		After our regular climbing we usually go to Sully's House. As we go as one group, the meetup host will usually pick up the bill.<br/> PLEASE CONFIRM WHO THE HOST IS FOR THE DAY BEFORE SENDING PAYMENT.
 	  </div>
+	  <PaymentCalculator onClosePopup={makeVenmoCall}/>
 	  <div style={{maxWidth: "1200px", width: "100%", margin: "auo"}}>
 		  <div style={{display: "flex", flexFlow: "row wrap"}}>
-			  {data?.length > 0 ? data.map( function(obj, index) { return BasicCard(obj) }) : null }
+			  {data?.length > 0 ? data.map( function(obj, index) { return BasicCard(obj, setSelectedUser) }) : null }
 			  
 		  </div>
 	  </div>
