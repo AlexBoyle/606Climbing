@@ -43,6 +43,7 @@ function BasicCard(obj, setSelectedUser) {
 function Payment() {
 	const [data, setData] = useState(null);
 	const [selectedUser, setSelectedUser] = useState(null);
+
 	useEffect(() => {
 		const xhr = new XMLHttpRequest();
 		xhr.open('GET', '/data/getRegularVenmo.json');
@@ -54,9 +55,11 @@ function Payment() {
 		xhr.send();
 	}, []);
 	let makeVenmoCall = useCallback((amt) => {
-        document.getElementById('venmoLoader').src = "venmo://paycharge?recipients=" + selectedUser + "&amount=" + amt + "&note=Sullys%20House&tnx=pay";
+	    if(amt !== "0.00")
+            document.getElementById('venmoLoader').src = "venmo://paycharge?recipients=" + selectedUser + "&amount=" + amt + "&note=Sullys%20House&tnx=pay";
+        setSelectedUser(null)
     }
-    , [selectedUser])
+    , [selectedUser, setSelectedUser])
 
 
   return (
@@ -64,7 +67,7 @@ function Payment() {
       <div style={{fontSize: "25px"}}>
 		After our regular climbing we usually go to Sully's House. As we go as one group, the meetup host will usually pick up the bill.<br/> PLEASE CONFIRM WHO THE HOST IS FOR THE DAY BEFORE SENDING PAYMENT.
 	  </div>
-	  <PaymentCalculator onClosePopup={makeVenmoCall}/>
+	  {selectedUser ? <PaymentCalculator onClosePopup={makeVenmoCall}/> : null}
 	  <div style={{maxWidth: "1200px", width: "100%", margin: "auo"}}>
 		  <div style={{display: "flex", flexFlow: "row wrap"}}>
 			  {data?.length > 0 ? data.map( function(obj, index) { return BasicCard(obj, setSelectedUser) }) : null }

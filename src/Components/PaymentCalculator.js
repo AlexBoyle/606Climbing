@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -8,7 +8,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 export default function PaymentCalculator({onClosePopup}) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const [amount, setAmount] = React.useState(0);
 
   const handleClickOpen = () => {
@@ -19,10 +19,11 @@ export default function PaymentCalculator({onClosePopup}) {
         setAmount(event.target.value);
   }
 
-  const handleClose = (amtString) => {
-    console.log(onClosePopup)
+  const handleClose = useCallback((amtString) => {
     onClosePopup?.(amtString);
-  };
+    setOpen(false);
+    setAmount(0)
+  }, [setAmount, setOpen]);
 
   return (
     <div>
@@ -33,12 +34,13 @@ export default function PaymentCalculator({onClosePopup}) {
         <DialogTitle>Enter Total</DialogTitle>
         <DialogContent>
             <TextField
+                value={amount ? amount : ""}
                 onChange={handleChange}
                 autoFocus
                 margin="dense"
-                id="name"
-                label="Email Address"
-                type="email"
+                id="amount"
+                label="amount"
+                type="number"
                 fullWidth
                 variant="standard"
               />
@@ -52,7 +54,7 @@ export default function PaymentCalculator({onClosePopup}) {
 
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => {handleClose(0)}}>Cancel</Button>
+          <Button onClick={() => {handleClose("0.00")}}>Cancel</Button>
           <Button onClick={() => {handleClose((amount * 1.3).toFixed(2))}}>Send</Button>
         </DialogActions>
       </Dialog>
