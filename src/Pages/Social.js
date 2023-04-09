@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function ExamplePage() {
-  return (
-    <>
-      Hello
-    </>
-  );
+	return <>Hello</>;
 }
 
 export default ExamplePage;

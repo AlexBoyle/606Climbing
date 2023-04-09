@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function ExamplePage() {
-  return (
-    <>
-      404
-    </>
-  );
+	return <>404</>;
 }
 
 export default ExamplePage;
