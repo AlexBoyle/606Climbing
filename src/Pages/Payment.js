@@ -11,10 +11,7 @@ import CardMedia from '@mui/material/CardMedia';
 function BasicCard(obj) {
 	let openVenmo= function() {
 	    document.getElementById('venmoLoader').src = obj['venmo'];
-	    var timer = setTimeout(function() {
-            window.location='https://google.com'
-        }, 3000);
-		//window.open(obj['venmo'], '_blank');
+	    document.getElementById('venmoLoader').src = "";
 	}
 	
   return (
