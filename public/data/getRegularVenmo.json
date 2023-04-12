@@ -1,17 +1,17 @@
 [
 	{
 		"name": "Derek",
-		"img": "/images/derek.png",
+		"img": "/images/people/derek.png",
 		"venmoUsername": "Derek-Morgan-1"
 	},
 	{
 		"name": "Alex",
-		"img": "/images/alex.png",
+		"img": "/images/people/alex.png",
 		"venmoUsername": "Alex-Boyle-10"
 	},
 	{
 		"name": "Kevin",
-		"img": "/images/kevin.png",
+		"img": "/images/people/kevin.png",
 		"venmoUsername": "KevinNasto"
 	}
 ]
