@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import PaymentCalculator from "../Components/PaymentCalculator";
+import { isMobile } from "react-device-detect";
 
 function BasicCard(obj, setSelectedUser) {
 	let openVenmo = function () {
@@ -68,7 +69,6 @@ function BasicCard(obj, setSelectedUser) {
 }
 
 function Payment() {
-	const [test, setTest] = useState(null);
 	const [data, setData] = useState(null);
 	const [selectedUser, setSelectedUser] = useState(null);
 
@@ -84,22 +84,35 @@ function Payment() {
 	}, []);
 	let makeVenmoCall = useCallback(
 		(amt) => {
-			if (amt !== "0.00")
-				document.getElementById("venmoLoader").src =
-					"venmo://paycharge?recipients=" +
+			if (amt !== "0.00") {
+				let getVars =
+					"?recipients=" +
 					selectedUser +
 					"&amount=" +
 					amt +
 					"&note=Sullys%20House&tnx=pay";
-			setTimeout(() => {
-			    setTest(document.visibilityState)
-				if (document.visibilityState !== "visible") {
-					window.location.href = "https://venmo.com/";
+
+				// Try to open Venmo App else open webpage
+				if (isMobile) {
+					document.getElementById("venmoLoader").src =
+						"venmo://paycharge" + getVars;
+					setTimeout(() => {
+						if (document.visibilityState === "visible") {
+							window
+								.open("https://account.venmo.com/pay" + getVars, "_blank")
+								.focus();
+						}
+					}, 1000);
+					// Open Venmo webpage
+				} else {
+					window
+						.open("https://account.venmo.com/pay" + getVars, "_blank")
+						.focus();
 				}
-			}, 2000);
-			setSelectedUser(null);
+				setSelectedUser(null);
+			}
 		},
-		[selectedUser, setSelectedUser, setTest]
+		[selectedUser, setSelectedUser]
 	);
 
 	return (
@@ -109,8 +122,7 @@ function Payment() {
 				one group, the meetup host will usually pick up the bill.
 				<br /> PLEASE CONFIRM WHO THE HOST IS FOR THE DAY BEFORE SENDING
 				PAYMENT.
-				<br/>
-				{test}
+				<br />
 			</div>
 			{selectedUser ? <PaymentCalculator onClosePopup={makeVenmoCall} /> : null}
 			<div style={{ width: "100%", margin: "auo" }}>

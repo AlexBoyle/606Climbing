@@ -1,7 +1,7 @@
 import React from "react";
 
-function ExamplePage() {
+function Social() {
 	return <>Hello</>;
 }
 
-export default ExamplePage;
+export default Social;

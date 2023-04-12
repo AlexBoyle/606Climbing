@@ -36,9 +36,6 @@ export default function PaymentCalculator({ onClosePopup }) {
 	return (
 		<ThemeProvider theme={darkTheme}>
 			<div style={{ backgroundColor: "rgb(26, 32, 39)", color: "white" }}>
-				<Button variant="outlined" onClick={handleClickOpen}>
-					Open form dialog
-				</Button>
 				<Dialog open={open} onClose={handleClose}>
 					<DialogTitle>Enter Total</DialogTitle>
 					<DialogContent>
