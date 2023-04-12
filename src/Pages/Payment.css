@@ -138,9 +138,3 @@ user agent stylesheet div {
 		margin: auto;
 	}
 }
-@media only screen and (min-width: 1181px) {
-	.cardContainer {
-		width: 1180px;
-		margin: auto;
-	}
-}

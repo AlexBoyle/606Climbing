@@ -13,18 +13,10 @@ function Header() {
 		<>
 			<Nav>
 				<NavMenu>
-					<NavLink to="/" activeStyle>
-						Home
-					</NavLink>
-					<NavLink to="/events" activeStyle>
-						Events
-					</NavLink>
-					<NavLink to="/social" activeStyle>
-						Join Our Socials
-					</NavLink>
-					<NavLink to="/payment" activeStyle>
-						Payments
-					</NavLink>
+					<NavLink to="/">Home</NavLink>
+					<NavLink to="/events">Events</NavLink>
+					<NavLink to="/social">Join Our Socials</NavLink>
+					<NavLink to="/payment">Payments</NavLink>
 				</NavMenu>
 			</Nav>
 		</>

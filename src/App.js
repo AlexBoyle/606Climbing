@@ -13,13 +13,15 @@ function App() {
 		<div className="App">
 			<Router>
 				<Header />
-				<Routes>
-					<Route path="/" exact element={<Home />} />
-					<Route path="/payment" element={<Payment />} />
-					<Route path="/events" element={<Events />} />
-					<Route path="/social" element={<Social />} />
-					<Route path="/*" element={<ExamplePage />} />
-				</Routes>
+				<div style={{ maxWidth: "1000px", margin: "auto", overflow: "hidden" }}>
+					<Routes>
+						<Route path="/" exact element={<Home />} />
+						<Route path="/payment" element={<Payment />} />
+						<Route path="/events" element={<Events />} />
+						<Route path="/social" element={<Social />} />
+						<Route path="/*" element={<ExamplePage />} />
+					</Routes>
+				</div>
 			</Router>
 		</div>
 	);

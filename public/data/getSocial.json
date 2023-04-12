@@ -1,0 +1,18 @@
+[
+	{
+		"imageUrl": "/images/logos/Whatsapp.png",
+		"linkUrl": ""
+	},
+	{
+		"imageUrl": "/images/logos/Instagram.png",
+		"linkUrl": "https://www.instagram.com/606climbing"
+	},
+	{
+		"imageUrl": "/images/logos/Facebook.png",
+		"linkUrl": "https://www.facebook.com/groups/606climbing"
+	},
+	{
+		"imageUrl": "/images/logos/Meetup.png",
+		"linkUrl": "https://www.meetup.com/606-climbing"
+	}
+]

@@ -1,12 +1,12 @@
 [
 	{
 		"name": "Derek",
-		"img": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/332527747_419557623711939_2831123920446332804_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=a1jMRSREjLEAX-pUiIR&_nc_ht=scontent-ord5-2.xx&oh=00_AfAeKuVM6Mixrs6nt4F1MAwTW048NCmCEpvowvId4ygpNg&oe=6435C3DC",
+		"img": "/images/derek.png",
 		"venmoUsername": "Derek-Morgan-1"
 	},
 	{
 		"name": "Alex",
-		"img": "https://scontent-ord5-1.xx.fbcdn.net/v/t1.6435-9/201201215_2089723111167682_8613872648861542852_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=SsL9AqYFoekAX_qbN83&_nc_ht=scontent-ord5-1.xx&oh=00_AfDPMrvWdns3C8UJCCUZJydAeFUWXBBTKPhIaTTAIIRK7Q&oe=645935CF",
+		"img": "/images/alex.png",
 		"venmoUsername": "Alex-Boyle-10"
 	},
 	{

@@ -1,0 +1,35 @@
+.socialBox {
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+	margin: 10px;
+	background-color: black;
+	border-radius: 10px;
+}
+.socialImage {
+	max-width: 90px;
+	max-height: 90px;
+	margin: auto;
+}
+.cardContainer {
+	margin: auto;
+}
+@media only screen and (max-width: 590px) {
+	.cardContainer {
+		width: 295px;
+		margin: auto;
+	}
+}
+@media only screen and (min-width: 591px) {
+	.cardContainer {
+		width: 590px;
+		margin: auto;
+	}
+}
+@media only screen and (min-width: 886px) {
+	.cardContainer {
+		width: 885px;
+		margin: auto;
+	}
+}
