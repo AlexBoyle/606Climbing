@@ -68,6 +68,7 @@ function BasicCard(obj, setSelectedUser) {
 }
 
 function Payment() {
+	const [test, setTest] = useState(null);
 	const [data, setData] = useState(null);
 	const [selectedUser, setSelectedUser] = useState(null);
 
@@ -91,13 +92,14 @@ function Payment() {
 					amt +
 					"&note=Sullys%20House&tnx=pay";
 			setTimeout(() => {
+			    setTest(document.visibilityState)
 				if (document.visibilityState !== "visible") {
 					window.location.href = "https://venmo.com/";
 				}
 			}, 2000);
 			setSelectedUser(null);
 		},
-		[selectedUser, setSelectedUser]
+		[selectedUser, setSelectedUser, setTest]
 	);
 
 	return (
@@ -107,6 +109,8 @@ function Payment() {
 				one group, the meetup host will usually pick up the bill.
 				<br /> PLEASE CONFIRM WHO THE HOST IS FOR THE DAY BEFORE SENDING
 				PAYMENT.
+				<br/>
+				{test}
 			</div>
 			{selectedUser ? <PaymentCalculator onClosePopup={makeVenmoCall} /> : null}
 			<div style={{ width: "100%", margin: "auo" }}>
