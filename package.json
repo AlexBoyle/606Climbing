@@ -15,13 +15,15 @@
 		"react-icons": "^4.8.0",
 		"react-router-dom": "^6.10.0",
 		"react-scripts": "5.0.1",
-		"styled-components": "^5.3.9"
+		"styled-components": "^5.3.9",
+		"prettier": "^2.8.7"
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build && rm -rf ./docs/* &&  mv ./build/* docs && rm -rf ./build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"makeBetter": "npx prettier --write ."
 	},
 	"eslintConfig": {
 		"extends": [
