@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<Router>
-				<div style={{ maxWidth: "1000px", margin: "auto", overflow: "hidden" }}>
+				<div >
 					<Routes>
 						<Route path="/" exact element={<Home />} />
 					</Routes>
